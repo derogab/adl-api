@@ -4,14 +4,27 @@ FROM python:3
 WORKDIR /usr/src/app
 
 # Install app dependencies
-RUN pip install flask
+RUN pip install pipenv
+
+# Copy Pipfile
+COPY Pipfile ./
+
+# Install Pipenv
+RUN pipenv install
 
 # Copy app 
 COPY app.py ./
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port 443
+EXPOSE 443
+
+# Environment
+ENV FLASK_APP app.py
 
 # Run the app
-ENTRYPOINT [ "python", "./app.py" ]
-CMD []
+CMD [ "pipenv", "run", "gunicorn", \
+        "-w", "4", \
+        "-b", ":443", \
+        "--certfile", "/certs/fullchain.pem", \
+        "--keyfile", "/certs/privkey.pem", \
+        "app:api" ]
