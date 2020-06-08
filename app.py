@@ -29,4 +29,4 @@ def get_form():
         return json.dumps(data)
 
 if __name__ == '__main__':
-    api.run(host='localhost', port=3000)
+    api.run(host='0.0.0.0', port=3000)
