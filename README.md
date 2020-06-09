@@ -12,6 +12,7 @@ docker run \
     -dit \
     -p 443:443 \
     --name adl-api \
+    --restart=always \
     --mount type=bind,source=/path/to/certs,target=/certs \
     derogab/adl-api
 ```
