@@ -1,5 +1,5 @@
 # ADL API
-## ADL Rest API Server
+API of the ADL project.
 
 ### Build 
 ```bash
