@@ -10,6 +10,7 @@ def get_main():
         "error": False,
         "api": [
             "/activities",
+            "/positions",
             "/form"
         ]
     }
@@ -19,6 +20,12 @@ def get_main():
 @api.route('/activities', methods=['GET'])
 def get_activities():
     with urllib.request.urlopen("https://pastebin.com/raw/bs6RK1Wv") as url:
+        data = json.loads(url.read().decode())
+        return json.dumps(data)
+
+@api.route('/positions', methods=['GET'])
+def get_positions():
+    with urllib.request.urlopen("https://pastebin.com/raw/mCadhQ0Y") as url:
         data = json.loads(url.read().decode())
         return json.dumps(data)
 
