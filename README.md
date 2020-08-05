@@ -40,3 +40,20 @@ docker run \
 
 ### Utils
 - [Deploying a Flask application with Gunicorn and Docker](https://medium.com/trabe/deploying-a-flask-application-with-gunicorn-and-docker-2bc7c4c10dd4)
+
+---
+### ADL Project
+This project was developed during the internship period in the university and it was presented as computer science bachelor degree project.
+
+##### Documentation
+| | Source |
+|:-------------------------:|:-------------------------:|
+|Thesis|https://github.com/derogab/adl-thesis|
+|Slides|https://github.com/derogab/adl-presentation|
+
+##### Source Code
+| | Source |
+|:------:|:---------:|
+|App|https://github.com/derogab/adl-app|
+|Server|https://github.com/derogab/adl-server|
+|Api|https://github.com/derogab/adl-api|
